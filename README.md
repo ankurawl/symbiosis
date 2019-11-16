@@ -2,5 +2,5 @@
 This is my professional portfolio. I am using AWS and ReactJS.
 
 # Technologies used
-Git and Github with Git Bash 
-SSH
+Git, Github,
+SSH, 
