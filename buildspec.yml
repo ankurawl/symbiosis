@@ -1,9 +1,12 @@
 version: 0.1
 
 phases:
-    build:
-      commands:
-        - echo nothing yet
+  install:
+    runtime-versions:
+      python: 3.0 
+  build:
+    commands:
+      - echo nothing yet
 artifacts:
   files:
     - index.html
