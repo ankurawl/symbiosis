@@ -1,9 +1,9 @@
-version: 1.0
+version: 0.1
 
 phases:
   install:
     runtime-versions:
-      python: 3.0
+      nodejs: 8
   build:
     commands:
       - echo nothing yet
