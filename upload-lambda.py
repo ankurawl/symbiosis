@@ -1,7 +1,7 @@
 import json
 import boto3
 from io import BytesIO
-import zipfile
+import zipfile 
 import mimetypes
 
 def lambda_handler(event, context):
