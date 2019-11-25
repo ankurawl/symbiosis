@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+        .errorBox {
+          border: 1px solid red;
+          background-color: #eebbbb;
+          margin: 1em;
+          padding: 2em;
+        }
+        .errorBox--hidden {
+          display: none;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <label>Name: <input type="text" id="name" name="" value=""> </label>
+      <button type="button" id="submit_info">Click Me!</button>
+      <div class="" id="content"> </div>
+      <div class="errorBox--hidden" id="error"> ERROR MSG goes here </div>
+    </main>
+
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js">
+    </script>
+
+    <script type="text/babel" data-presets="latest">
+
+      const getMessage = (name) => `Welcome to Javascript, ${name}!`;
+      const button = document.getElementById('submit_info');
+      const messageArea = document.getElementById('error');
+
+      button.addEventListener('click', (evt) => {
+        messageArea.className = 'errorBox--hidden';
+        let tempname = document.getElementById('name').value;
+        if (tempname.length < 3) {
+          document.getElementById('content').textContent = "";
+          messageArea.textContent = "You need to enter a valid name.";
+          messageArea.className = 'errorBox';
+        }
+        else {
+          document.getElementById('content').textContent = getMessage(tempname);
+        }
+      });
+
+    </script>
+
+  </body>
+</html>
