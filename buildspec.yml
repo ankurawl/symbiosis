@@ -4,7 +4,7 @@ phases:
   install:
     runtime-versions:
       nodejs: 8
-  pre-build:
+  pre_build:
     commands:
       - npm install
       - npm test
